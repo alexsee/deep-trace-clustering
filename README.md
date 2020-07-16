@@ -16,3 +16,7 @@ Use Miniconda for the easiest way to setup an environment.
 
 ## Jupyter Notebooks
 Check the `notebooks` directory for example Jupyter Notebooks.
+
+## Datasets
+- [Synthetic event logs for multi-perspective trace clustering](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2338)
+- [Extended synthetic event logs for multi-perspective trace clustering](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2415)
