@@ -4,7 +4,7 @@
 Use Miniconda for the easiest way to setup an environment.
 
 ### Using Miniconda
-1. 1. Install [Miniconda](https://conda.io/miniconda.html) (make sure to use a Python 3 version)
+1. Install [Miniconda](https://conda.io/miniconda.html) (make sure to use a Python 3 version)
 2. After setting up miniconda you can make use of the `conda` command in your command line (Powershell, CMD, Bash)
 3. We suggest that you set up a dedicated environment for this project by running `conda env create -f environment.yml`
     * This will setup a virtual conda environment with all necessary dependencies.
