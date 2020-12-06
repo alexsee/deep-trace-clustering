@@ -1,4 +1,4 @@
-# DeepCluster: Learning Good Representations for Trace Clustering
+# Learning of Process Representations Using Recurrent Neural Networks
 
 ## Setup
 Use Miniconda for the easiest way to setup an environment.
