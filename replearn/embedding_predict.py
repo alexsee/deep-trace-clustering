@@ -34,7 +34,7 @@ class EmbeddingPredict(object):
             inp = tf.keras.layers.Input(shape=(None, ))
             embedding = tf.keras.layers.Embedding(input_dim=len(self._event_attribute_encoders[event_attribute].classes_) + 1, 
                                                   output_dim=embedding_dim, 
-                                                  name='embedding_' + event_attribute.replace(':',''))(inp)
+                                                  name='embedding_' + event_attribute.replace(':','').replace('(', '').replace(')',''))(inp)
 
             self._input_layers.append(inp)
             self._embedding_layers.append(embedding)

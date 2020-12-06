@@ -27,7 +27,7 @@ class Doc2VecRepresentation(object):
    
             if concat:
                 for event in trace:
-                    event_attr = '+'.join(filter(None, [None if event_attribute != 'concept:name' and append_event_attr == False else str(event[event_attribute]) for event_attribute in self._event_log.event_attributes]))
+                    event_attr = '+'.join(filter(None, [None if event_attribute != 'concept:name' and append_event_attr == False else str(event[event_attribute]) for event_attribute in set(self._event_log.event_attributes).intersection(event.keys())]))
                     words.append(event_attr + str(case_attr))
             else:
                 for event in trace:

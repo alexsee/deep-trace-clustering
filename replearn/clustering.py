@@ -1,5 +1,5 @@
 from sklearn.cluster import AgglomerativeClustering, KMeans, DBSCAN
-from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score, silhouette_score, homogeneity_score
+from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score, silhouette_score, homogeneity_score, completeness_score
 from sklearn import preprocessing
 
 from scipy.spatial.distance import pdist
@@ -11,7 +11,7 @@ import fastcluster
 import scipy.cluster
 import numpy as np
 import nltk
-import replearn.b3 as b3
+import replearn.processmining.b3 as b3
 
 class Clustering(object):
     def __init__(self,
@@ -48,10 +48,11 @@ class Clustering(object):
         ari = adjusted_rand_score(self._event_log.true_cluster_labels, self._pred_labels)
         nmi = normalized_mutual_info_score(self._event_log.true_cluster_labels, self._pred_labels)
         homogeneity = homogeneity_score(self._event_log.true_cluster_labels, self._pred_labels)
+        completeness = completeness_score(self._event_log.true_cluster_labels, self._pred_labels)
         
         fmeasure, precision, recall = b3.calc_b3(self._event_log.true_cluster_labels, self._pred_labels)
 
-        return ari, nmi, fmeasure, 0, homogeneity, distribution
+        return ari, nmi, fmeasure, 0, homogeneity, completeness, distribution
     
     
     # K-Means
